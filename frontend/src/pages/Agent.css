@@ -1,0 +1,223 @@
+/* ===============================
+MAIN CONTAINER
+=============================== */
+.agent-container {
+  min-height: 100vh;
+  padding: 40px;
+
+  background: linear-gradient(-45deg, #02080f, #071a29, #0f2a3d, #02131f);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
+
+  color: white;
+}
+
+@keyframes gradientMove {
+  0% {background-position:0% 50%}
+  50% {background-position:100% 50%}
+  100% {background-position:0% 50%}
+}
+
+/* ===============================
+HEADER
+=============================== */
+.agent-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.agent-header h2 {
+  font-size: 2rem;
+  background: linear-gradient(90deg,#00c6ff,#64e0ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.agent-header span {
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* ===============================
+DASHBOARD
+=============================== */
+.dashboard-grid {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  flex: 1;
+  padding: 20px;
+  border-radius: 14px;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.stat-value {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.stat-value.danger {
+  color: #ff4d4d;
+}
+
+/* ===============================
+CONTENT LAYOUT
+=============================== */
+.agent-content {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.agent-left,
+.agent-right {
+  flex: 1;
+
+  padding: 25px;
+  border-radius: 16px;
+
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ===============================
+BUTTONS (IMPORTANT FIX)
+=============================== */
+.agent-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.agent-btn {
+  padding: 12px 25px;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg,#00c6ff,#0072ff);
+  color: white;
+
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.agent-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(0,200,255,0.6);
+}
+
+/* SECONDARY BUTTON */
+.agent-btn.secondary {
+  background: rgba(255,255,255,0.1);
+}
+
+/* ===============================
+RESPONSIVE
+=============================== */
+@media (max-width: 900px) {
+  .agent-content {
+    flex-direction: column;
+  }
+
+  .dashboard-grid {
+    flex-direction: column;
+  }
+}
+
+/* ===============================
+GLASS CARD
+=============================== */
+.glass-card {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(18px);
+  border-radius: 18px;
+  padding: 25px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ===============================
+SECTION TITLE
+=============================== */
+.section-title {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #00c6ff;
+}
+
+/* ===============================
+HOVER GLOW
+=============================== */
+.hover-glow:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0,200,255,0.4);
+}
+
+/* ===============================
+SUCCESS COLOR
+=============================== */
+.stat-value.success {
+  color: #00ffae;
+}
+
+/* ===============================
+ANALYSIS LIST
+=============================== */
+.analysis-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* EACH ROW */
+.analysis-item {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 10px 12px;
+  border-radius: 10px;
+
+  background: rgba(0,200,255,0.08);
+  border: 1px solid rgba(0,200,255,0.2);
+
+  font-size: 0.95rem;
+}
+
+/* KEY */
+.analysis-key {
+  text-transform: capitalize;
+  opacity: 0.7;
+}
+
+/* VALUE */
+.analysis-value {
+  font-weight: 600;
+  color: #00e6ff;
+}
+
+/* ===============================
+NO DATA
+=============================== */
+.no-data {
+  opacity: 0.6;
+}
+
+/* ===============================
+PRIMARY BUTTON
+=============================== */
+.agent-btn.primary {
+  background: linear-gradient(135deg,#00c6ff,#0072ff);
+}
+
+.agent-btn.primary:hover {
+  box-shadow: 0 0 25px rgba(0,200,255,0.8);
+}
